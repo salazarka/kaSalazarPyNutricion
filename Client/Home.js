@@ -46,19 +46,8 @@ const styles = StyleSheet.create({
   },
 });
 
-/* const firebaseConfig = {
-  apiKey: "AIzaSyB4An-mU9xJS1HFK3-wDKHgj_SeplK4c2w",
-  authDomain: "proyecto-92f5c.firebaseapp.com",
-  databaseURL: "https://proyecto-92f5c.firebaseio.com",
-  projectId: "proyecto-92f5c",
-  storageBucket: "proyecto-92f5c.appspot.com",
-  messagingSenderId: "266657736727"
-  }
-  
-const firebaseApp =  firebase.initializeApp(firebaseConfig);    */
 
-const firebaseApp = require('../firebaseconfig.js');
-//console.log(firebaseApp);
+const firebaseApp = require('../firebaseconfig');
 
 export class Home extends React.Component{
   static navigationOptions = {
@@ -189,7 +178,6 @@ export class Home extends React.Component{
     return (
         <View>
           <Text  style={styles.container}
-          //onPress={() => this.props.navigation.navigate('ProfileScreen',)}>
             onPress={() =>  Alert.alert(
               'Descripcion',
               item.note,
@@ -207,10 +195,6 @@ export class Home extends React.Component{
   render() {
     return (
       <View>
-        {/*<ListView 
-          dataSource = {this.state.itemDataSource}
-          renderRow={ this.renderRow}
-        />*/}
         <Collapse>
           <CollapseHeader>
             <Separator style={styles.expandible} bordered>

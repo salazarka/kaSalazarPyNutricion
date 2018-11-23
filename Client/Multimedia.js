@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image, Dimensions } from 'react-native';
 import Carousel from 'react-native-carousel-view';
 import { Video } from 'expo';
-import { MaterialIcons, Octicons } from '@expo/vector-icons';
+import { MaterialIcons } from '@expo/vector-icons';
 
 const deviceHeight = (Dimensions.get('window').height);
 
@@ -36,8 +36,7 @@ const styles = StyleSheet.create({
         bottom: 0,
         left: 0,
         right: 0,
-        width: 300,
-        marginLeft: 30,
+        width: 375,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
@@ -71,7 +70,7 @@ export default class Multimedia extends React.Component{
             <View style={styles.container}>
             <Carousel
             width={375}
-            height={deviceHeight-80}
+            height={deviceHeight}
             showIndicators={true}   
             animate={false}
             pageInfo={true}
@@ -88,12 +87,11 @@ export default class Multimedia extends React.Component{
                     <Video
                         source={{ uri:'https://firebasestorage.googleapis.com/v0/b/proyecto-92f5c.appspot.com/o/%C2%A1Lleva%20una%20alimentaci%C3%B3n%20saludable!%20El%20Chef%20Manuel%20Tuz%20de%20la%20Escuela%20de%20Gastro....mp4?alt=media&token=5bd4fdeb-9ca5-4d19-9f9d-d7a95400132b' }}
                             shouldPlay={this.state.shouldPlay}
-                        resizeMode="cover"
-                        style={{ 
-                            width: 350,
-                            height: 300, 
-                            marginLeft: 10,
-                        }}
+                            resizeMode="contain"
+                            style={{ 
+                                width: 375,
+                                height: 300, 
+                            }}
                         isMuted={this.state.mute}
                     />
                     <View style={styles.controlBar}>
@@ -119,18 +117,18 @@ export default class Multimedia extends React.Component{
                     Ingredients:
                 </Text>
             </View>
+
             <View style={styles.container}>
                 <View>
                     <Text style={styles.textTitle}>Name</Text>
                     <Video
-                        source={{ uri:'https://firebasestorage.googleapis.com/v0/b/proyecto-92f5c.appspot.com/o/Keto-Friendly%20Lasagne%20Dinner.mp4?alt=media&token=b54a2776-202d-463b-8c44-5756c71e7a60s' }}
+                        source={{ uri:'https://firebasestorage.googleapis.com/v0/b/proyecto-92f5c.appspot.com/o/EL%20chef%20Manuel%20Tuz%20nos%20ense%C3%B1a%20a%20preparar%20una%20tilapia%20marinada%20al%20or%C3%A9gano%20en%20u....mp4?alt=media&token=a4a3f07e-7621-4902-b8af-165b5d87f0ff' }}
                             shouldPlay={this.state.shouldPlay}
-                        resizeMode="cover"
-                        style={{ 
-                            width: 300,
-                            height: 300, 
-                            marginLeft: 30,
-                        }}
+                            resizeMode="contain"
+                            style={{ 
+                                width: 375,
+                                height: 300, 
+                            }}
                         isMuted={this.state.mute}
                     />
                     <View style={styles.controlBar}>
@@ -156,6 +154,8 @@ export default class Multimedia extends React.Component{
                     Ingredients:
                 </Text>
             </View>
+
+            
             
             <View style={styles.contentContainer}>
                 <Text style={styles.textTitle}>Name</Text>
@@ -387,182 +387,6 @@ export default class Multimedia extends React.Component{
                     style={styles.icon}
                     source={{
                     uri: 'https://firebasestorage.googleapis.com/v0/b/proyecto-92f5c.appspot.com/o/dish15.jpeg?alt=media&token=a07df426-9e77-4c00-a46a-e9cf79958b3c.jpeg'
-                    }}
-                />
-                <Text style={styles.text}>
-                    Calories:
-                </Text>
-                <Text style={styles.text}>
-                    Ingredients:
-                </Text>
-            </View>
-
-            <View style={styles.contentContainer}>
-                <Text style={styles.textTitle}>Name</Text>
-                <Image 
-                    style={styles.icon}
-                    source={{
-                    uri: 'https://firebasestorage.googleapis.com/v0/b/proyecto-92f5c.appspot.com/o/dish16.jpeg?alt=media&token=cd6567cb-0c75-4964-bac8-2a3adc5937bd.jpeg'
-                    }}
-                />
-                <Text style={styles.text}>
-                    Calories:
-                </Text>
-                <Text style={styles.text}>
-                    Ingredients:
-                </Text>
-            </View>
-
-            <View style={styles.contentContainer}>
-                <Text style={styles.textTitle}>Name</Text>
-                <Image 
-                    style={styles.icon}
-                    source={{
-                    uri: 'https://firebasestorage.googleapis.com/v0/b/proyecto-92f5c.appspot.com/o/dish17.jpeg?alt=media&token=dfda44df-f2fd-4ad4-ace1-584bcda10fa6.jpeg'
-                    }}
-                />
-                <Text style={styles.text}>
-                    Calories:
-                </Text>
-                <Text style={styles.text}>
-                    Ingredients:
-                </Text>
-            </View>
-
-            <View style={styles.contentContainer}>
-                <Text style={styles.textTitle}>Name</Text>
-                <Image 
-                    style={styles.icon}
-                    source={{
-                    uri: 'https://firebasestorage.googleapis.com/v0/b/proyecto-92f5c.appspot.com/o/dish18.jpeg?alt=media&token=d529720d-a1b7-4470-bfb0-d9305a00a670.jpeg'
-                    }}
-                />
-                <Text style={styles.text}>
-                    Calories:
-                </Text>
-                <Text style={styles.text}>
-                    Ingredients:
-                </Text>
-            </View>
-
-            <View style={styles.contentContainer}>
-                <Text style={styles.textTitle}>Name</Text>
-                <Image 
-                    style={styles.icon}
-                    source={{
-                    uri: 'https://firebasestorage.googleapis.com/v0/b/proyecto-92f5c.appspot.com/o/dish19.jpeg?alt=media&token=dc6ab7f2-2755-4014-bb1a-62a03c916e38.jpeg'
-                    }}
-                />
-                <Text style={styles.text}>
-                    Calories:
-                </Text>
-                <Text style={styles.text}>
-                    Ingredients:
-                </Text>
-            </View>
-
-            <View style={styles.contentContainer}>
-                <Text style={styles.textTitle}>Name</Text>
-                <Image 
-                    style={styles.icon}
-                    source={{
-                    uri: 'https://firebasestorage.googleapis.com/v0/b/proyecto-92f5c.appspot.com/o/dish20.jpeg?alt=media&token=3785e953-71ad-478a-aad3-7a0c648530d5.jpeg'
-                    }}
-                />
-                <Text style={styles.text}>
-                    Calories:
-                </Text>
-                <Text style={styles.text}>
-                    Ingredients:
-                </Text>
-            </View>
-
-            <View style={styles.contentContainer}>
-                <Text style={styles.textTitle}>Name</Text>
-                <Image 
-                    style={styles.icon}
-                    source={{
-                    uri: 'https://firebasestorage.googleapis.com/v0/b/proyecto-92f5c.appspot.com/o/dish21.jpeg?alt=media&token=589d1a79-b3c7-4452-a1a7-167f654c816a.jpeg'
-                    }}
-                />
-                <Text style={styles.text}>
-                    Calories:
-                </Text>
-                <Text style={styles.text}>
-                    Ingredients:
-                </Text>
-            </View>
-
-            <View style={styles.contentContainer}>
-                <Text style={styles.textTitle}>Name</Text>
-                <Image 
-                    style={styles.icon}
-                    source={{
-                    uri: 'https://firebasestorage.googleapis.com/v0/b/proyecto-92f5c.appspot.com/o/dish22.jpeg?alt=media&token=33e15788-520c-419c-9712-09ef46bb5dc3'
-                    }}
-                />
-                <Text style={styles.text}>
-                    Calories:
-                </Text>
-                <Text style={styles.text}>
-                    Ingredients:
-                </Text>
-            </View>
-
-            <View style={styles.contentContainer}>
-                <Text style={styles.textTitle}>Name</Text>
-                <Image 
-                    style={styles.icon}
-                    source={{
-                    uri: 'https://firebasestorage.googleapis.com/v0/b/proyecto-92f5c.appspot.com/o/dish23.jpeg?alt=media&token=a168bfef-3bd7-4bba-a309-ef7208de14a9.jpeg'
-                    }}
-                />
-                <Text style={styles.text}>
-                    Calories:
-                </Text>
-                <Text style={styles.text}>
-                    Ingredients:
-                </Text>
-            </View>
-
-            <View style={styles.contentContainer}>
-                <Text style={styles.textTitle}>Name</Text>
-                <Image 
-                    style={styles.icon}
-                    source={{
-                    uri: 'https://firebasestorage.googleapis.com/v0/b/proyecto-92f5c.appspot.com/o/dish24.jpeg?alt=media&token=0b079971-7eb1-4e1f-9baa-4f0b7fd76934.jpeg'
-                    }}
-                />
-                <Text style={styles.text}>
-                    Calories:
-                </Text>
-                <Text style={styles.text}>
-                    Ingredients:
-                </Text>
-            </View>
-
-            <View style={styles.contentContainer}>
-                <Text style={styles.textTitle}>Name</Text>
-                <Image 
-                    style={styles.icon}
-                    source={{
-                    uri: 'https://firebasestorage.googleapis.com/v0/b/proyecto-92f5c.appspot.com/o/dish25.jpeg?alt=media&token=b6e3c33d-85ea-4e55-a981-7b965ba79737.jpeg'
-                    }}
-                />
-                <Text style={styles.text}>
-                    Calories:
-                </Text>
-                <Text style={styles.text}>
-                    Ingredients:
-                </Text>
-            </View>
-
-            <View style={styles.contentContainer}>
-                <Text style={styles.textTitle}>Name</Text>
-                <Image 
-                    style={styles.icon}
-                    source={{
-                    uri: 'https://firebasestorage.googleapis.com/v0/b/proyecto-92f5c.appspot.com/o/dish26.jpeg?alt=media&token=053d2f33-d73c-4698-b2ad-c339d94bdaab.jpeg'
                     }}
                 />
                 <Text style={styles.text}>
