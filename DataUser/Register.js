@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Button, StyleSheet, Text, View, Alert } from 'react-native';
+import { Button, StyleSheet, Text, View, Alert, ImageBackground } from 'react-native';
+import { ListItem, Separator } from 'native-base';
 
 export class Register extends Component {
     constructor(props) {
@@ -8,23 +9,42 @@ export class Register extends Component {
 
 
     render() {
-        return ( < View >
+        return ( <
+            ImageBackground source = { require('../assets/nutbg.jpg') }
+            style = { styles.container } >
 
             <
-            Text style = { styles.title } > REGISTRATION < /Text>  
+            View >
+
+            <
+            Text style = { styles.title } > REGISTRATION < /Text> 
+
+            <
+            Separator style = { styles.expandible }
+            bordered >
+
+            <
+            /Separator > 
 
             <
             Button title = "CLIENT"
-            color = "#91a8c6"
+            color = "#728e75"
             onPress = {
                 () => this.props.navigation.navigate('ClientRegistScreen', )
             }
             />
 
+            <
+            Separator style = { styles.expandible }
+            bordered >
+
+            <
+            /Separator >
+
 
             <
             Button title = "NUTRITIONIST"
-            color = "#7da8e0"
+            color = "#aa6d71"
             onPress = {
                 () => this.props.navigation.navigate('NutriRegistScreen', )
 
@@ -33,6 +53,9 @@ export class Register extends Component {
 
             <
             /View>
+
+            <
+            /ImageBackground>
         )
     }
 }
@@ -41,9 +64,16 @@ export class Register extends Component {
 const styles = StyleSheet.create({
     title: {
         marginTop: 30,
-        color: '#26754f',
+        color: 'white',
         fontSize: 25,
         textAlign: 'center',
+    },
+    expandible: {
+        backgroundColor: 'transparent',
+        marginTop: 3,
+    },
+    container: {
+        flex: 1,
     }
 });
 

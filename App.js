@@ -8,6 +8,7 @@ import ClientRegistration from './DataUser/ClientRegistration';
 import NutritionistRegistration from './DataUser/NutritionistRegistration';
 import Multimedia from './Client/Multimedia';
 import AddBoard from './Client/addBoard';
+import HomeNut from './Nutritionist/HomeNut';
 
 const AppNavigator = StackNavigator({
     LoginScreen: { screen: Login },
@@ -16,14 +17,15 @@ const AppNavigator = StackNavigator({
     ClientRegistScreen: { screen: ClientRegistration },
     NutriRegistScreen: { screen: NutritionistRegistration },
     ProfileScreen: { screen: Profile },
-    MultimediaScreen: { screen: Multimedia},
-    AddBoardScreen: { screen: AddBoard }
+    MultimediaScreen: { screen: Multimedia },
+    AddBoardScreen: { screen: AddBoard },
+    HomeNutScreen: { screen: HomeNut }
 });
 
 export default class App extends React.Component {
     render() {
-        return ( 
-            <AppNavigator/>
+        return ( <
+            AppNavigator / >
         );
     }
 }
